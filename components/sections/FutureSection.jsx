@@ -19,7 +19,7 @@ const FutureSection = ({ data }) => {
         />
         
         <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-4">Tendencias Emergentes</h3>
+          <h3 className="text-xl font-semibold mb-4 text-white">Tendencias Emergentes</h3>
           <ul className="space-y-4">
             {data.trends && data.trends.map((trend, index) => (
               <li key={index} className="flex items-start">
@@ -28,7 +28,7 @@ const FutureSection = ({ data }) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </span>
-                <span className="text-lg font-medium">{trend}</span>
+                <span className="text-lg font-medium text-white">{trend}</span>
               </li>
             ))}
           </ul>

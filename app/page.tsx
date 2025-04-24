@@ -6,6 +6,9 @@ import HeroSection from '../components/sections/HeroSection';
 import {
   IntroSection,
   HowItWorksSection,
+  KeyTechnologiesSection,
+  ModelsComparisonSection,
+  MonitoringToolsSection,
   BenefitsSection,
   IndustryImpactSection,
   TechSupportSection,
@@ -39,6 +42,35 @@ interface Application {
   icon: string;
 }
 
+interface Technology {
+  name: string;
+  provider: string;
+  description: string;
+  features: string[];
+  icon: string;
+}
+
+interface ComparisonModel {
+  model: string;
+  description: string;
+  responsibility: string;
+  scalability: string;
+  cost: string;
+}
+
+interface MonitoringTool {
+  name: string;
+  description: string;
+  features: string[];
+  icon: string;
+}
+
+interface UseCase {
+  title: string;
+  description: string;
+  impact: string;
+}
+
 interface Section {
   id: string;
   title: string;
@@ -52,6 +84,10 @@ interface Section {
   applications?: Application[];
   challenges?: Challenge[];
   trends?: string[];
+  technologies?: Technology[];
+  comparison?: ComparisonModel[];
+  tools?: MonitoringTool[];
+  useCases?: UseCase[];
 }
 
 interface ServerlessData {
@@ -131,6 +167,12 @@ const MainContent = () => {
             return <IntroSection key={section.id} data={section} />;
           case 'how-it-works':
             return <HowItWorksSection key={section.id} data={section} />;
+          case 'key-technologies':
+            return <KeyTechnologiesSection key={section.id} data={section} />;
+          case 'models-comparison':
+            return <ModelsComparisonSection key={section.id} data={section} />;
+          case 'monitoring-tools':
+            return <MonitoringToolsSection key={section.id} data={section} />;
           case 'benefits':
             return <BenefitsSection key={section.id} data={section} />;
           case 'industry-impact':
