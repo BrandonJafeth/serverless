@@ -29,21 +29,6 @@ const IndustryImpactSection = ({ data }) => {
           ))}
         </div>
         
-        <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-blue-300">Casos de Estudio Destacados</h3>
-          <ul className="space-y-3 text-left">
-            {data.caseStudies && data.caseStudies.map((caseStudy, index) => (
-              <li key={index} className="flex items-start">
-                <span className="flex-shrink-0 h-6 w-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 mt-1 shadow-md">
-                  <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span className="text-lg font-medium text-gray-300">{caseStudy}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </BaseContentSection>
   );

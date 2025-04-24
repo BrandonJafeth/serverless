@@ -57,13 +57,16 @@ const TechSupportSection = ({ data }) => {
             return (
               <div 
                 key={index} 
-                className={`w-64 bg-gray-900 rounded-lg shadow-md border-t-4 ${style.border} p-5 text-center flex flex-col items-center`}
+                className={`w-64 bg-gray-900 rounded-lg shadow-md border-t-4 ${style.border} p-5 text-center flex flex-col items-center
+                  transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl 
+                  hover:shadow-${style.border.split('-')[1]}-400/20 hover:bg-gray-800`}
               >
-                <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 ${style.icon}`}>
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 ${style.icon}
+                  transform transition-all duration-300 hover:scale-110`}>
                   {getIcon(app.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-blue-300 mb-2">{app.title}</h3>
-                <p className="text-gray-300 text-sm">{app.description}</p>
+                <h3 className="text-xl font-bold text-blue-300 mb-2 transition-colors duration-300 hover:text-blue-200">{app.title}</h3>
+                <p className="text-gray-300 text-sm transition-colors duration-300 group-hover:text-gray-200">{app.description}</p>
               </div>
             );
           })}
@@ -78,15 +81,17 @@ const TechSupportSection = ({ data }) => {
               {data.useCases.map((useCase, index) => (
                 <div 
                   key={index} 
-                  className="bg-gray-900 rounded-lg shadow-md border border-gray-700 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-gray-900 rounded-lg shadow-md border border-gray-700 
+                  transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl 
+                  hover:shadow-blue-400/20 hover:bg-gray-800"
                 >
                   <div className="p-6">
-                    <h4 className="text-xl font-bold mb-3 text-blue-300">{useCase.title}</h4>
-                    <p className="text-gray-300 mb-6 text-sm">{useCase.description}</p>
+                    <h4 className="text-xl font-bold mb-3 text-blue-300 transition-colors duration-300 hover:text-blue-200">{useCase.title}</h4>
+                    <p className="text-gray-300 mb-6 text-sm transition-colors duration-300 hover:text-gray-200">{useCase.description}</p>
                     
                     <div className="mt-auto">
-                      <p className="text-sm font-semibold text-blue-300">
-                        Impacto: <span className="text-blue-400">{useCase.impact}</span>
+                      <p className="text-sm font-semibold text-blue-300 transition-colors duration-300">
+                        Impacto: <span className="text-blue-400 transition-colors duration-300 hover:text-blue-300">{useCase.impact}</span>
                       </p>
                     </div>
                   </div>
