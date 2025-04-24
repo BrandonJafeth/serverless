@@ -80,12 +80,6 @@ const HeroSection = ({ data }) => {
           ref={buttonsRef}
           className="mt-10 flex justify-center space-x-4 opacity-0"
         >
-          <button className="px-8 py-3 bg-gray-900 text-blue-300 rounded-full font-medium hover:bg-gray-800 transition-colors">
-            Conocer más
-          </button>
-          <button className="px-8 py-3 bg-transparent border-2 border-blue-300 text-blue-300 rounded-full font-medium hover:bg-white/10 transition-colors">
-            Ver demo
-          </button>
         </div>
       </div>
     </section>
