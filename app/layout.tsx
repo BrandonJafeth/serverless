@@ -17,20 +17,20 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={inter.className}>
-        <header className="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <header className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" className="text-xl font-bold text-blue-800">
-              Serverless<span className="text-blue-500">Research</span>
+            <a href="#" className="text-xl font-bold text-blue-400">
+              Serverless<span className="text-blue-300">Research</span>
             </a>
             <nav className="hidden md:flex space-x-8">
-              <a href="#intro" className="text-gray-700 hover:text-blue-600 transition-colors">¿Qué es?</a>
-              <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors">Beneficios</a>
-              <a href="#industry-impact" className="text-gray-700 hover:text-blue-600 transition-colors">Impacto</a>
-              <a href="#tech-support" className="text-gray-700 hover:text-blue-600 transition-colors">Aplicaciones</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contacto</a>
+              <a href="#intro" className="text-gray-300 hover:text-blue-300 transition-colors">¿Qué es?</a>
+              <a href="#benefits" className="text-gray-300 hover:text-blue-300 transition-colors">Beneficios</a>
+              <a href="#industry-impact" className="text-gray-300 hover:text-blue-300 transition-colors">Impacto</a>
+              <a href="#tech-support" className="text-gray-300 hover:text-blue-300 transition-colors">Aplicaciones</a>
+              <a href="#contact" className="text-gray-300 hover:text-blue-300 transition-colors">Contacto</a>
             </nav>
             <button className="md:hidden">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>

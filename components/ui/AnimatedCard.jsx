@@ -20,17 +20,17 @@ const AnimatedCard = ({
   return (
     <div 
       ref={cardRef}
-      className={`bg-white p-6 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0 flex flex-col items-center text-center h-full ${className}`}
+      className={`bg-gray-900 p-6 border border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0 flex flex-col items-center text-center h-full ${className}`}
     >
       {icon && (
-        <div className="text-blue-600 mb-4 flex justify-center">
+        <div className="text-blue-400 mb-4 flex justify-center">
           <div className="h-16 w-16 flex items-center justify-center">
             {icon}
           </div>
         </div>
       )}
-      <h3 className="text-xl font-semibold mb-3 text-blue-600">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-blue-300">{title}</h3>
+      <p className="text-gray-300">{description}</p>
     </div>
   );
 };

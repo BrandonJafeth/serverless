@@ -31,20 +31,20 @@ const MonitoringToolsSection = ({ data }) => {
   };
   
   return (
-    <BaseContentSection data={data} bgColor="bg-gradient-to-br from-blue-50 to-indigo-50">
+    <BaseContentSection data={data} bgColor="bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="w-full">
         <SectionTitle 
           title={data.title} 
           subtitle={data.content} 
           centered={true} 
-          textColor="text-gray-900"
+          textColor="text-gray-300"
         />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {data.tools.map((tool, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:-translate-y-2 duration-300"
+              className="bg-gray-900 border border-gray-700 rounded-xl shadow-xl overflow-hidden transform transition-all hover:-translate-y-2 duration-300"
             >
               {/* Encabezado con color según la herramienta */}
               <div className={`
@@ -64,17 +64,17 @@ const MonitoringToolsSection = ({ data }) => {
               
               {/* Contenido */}
               <div className="p-6">
-                <p className="text-gray-900 mb-6">{tool.description}</p>
+                <p className="text-gray-300 mb-6">{tool.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Características:</h4>
+                  <h4 className="font-semibold text-gray-200 mb-3">Características:</h4>
                   <ul className="space-y-2">
                     {tool.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-gray-900">{feature}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

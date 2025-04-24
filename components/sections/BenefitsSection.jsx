@@ -13,14 +13,14 @@ const BenefitsSection = ({ data }) => {
   };
   
   return (
-    <BaseContentSection data={data} bgColor="bg-white">
+    <BaseContentSection data={data} bgColor="bg-gray-800">
       <div className="w-full max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <SectionTitle 
             title={data.title} 
             subtitle={data.content} 
             centered={true}
-            titleColor="text-blue-600"
+            titleColor="text-blue-400"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
