@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   title: "Serverless - Revolución en la Computación en la Nube",
   description: "Un análisis detallado de la tecnología Serverless, su impacto en la industria y aplicaciones en soporte técnico avanzado",
   icons: {
-    icon: "https://img.icons8.com/?size=100&id=e2u7E9taQbyf&format=png&color=000000"
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/new-favicon.png', sizes: '64x64', type: 'image/png' }
+    ],
+    apple: { url: '/new-favicon.png', sizes: '180x180', type: 'image/png' },
+    shortcut: { url: '/new-favicon.png' }
   }
 };
 
