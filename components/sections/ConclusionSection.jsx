@@ -11,7 +11,8 @@ const ConclusionSection = ({ data }) => {
         <SectionTitle 
           title={data.title} 
           subtitle={data.content} 
-          centered={true} 
+          centered={true}
+          textColor="text-gray-900"
         />
       </div>
     </BaseContentSection>

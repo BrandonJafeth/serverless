@@ -13,7 +13,7 @@
       "id": "intro",
       "title": "¿Qué es Serverless?",
       "content": "Serverless Computing, o 'Computación sin servidor', es un modelo de ejecución en la nube donde el proveedor de servicios en la nube gestiona dinámicamente la asignación y aprovisionamiento de recursos. Los precios se basan en la cantidad real de recursos consumidos por una aplicación, en lugar de en unidades precompradas de capacidad.",
-      "imageUrl": "/images/serverless-diagram.svg",
+      "imageUrl": "/images/serverless-concept.jpg",
       "animation": "fadeInUp"
     },
     {
@@ -26,8 +26,123 @@
         "Pago por uso",
         "Sin gestión de servidores"
       ],
-      "imageUrl": "/images/serverless-flow.svg",
+      "imageUrl": "/images/serverless-architecture.jpg",
       "animation": "fadeInRight"
+    },
+    {
+      "id": "key-technologies",
+      "title": "Tecnologías Clave en Serverless",
+      "content": "El ecosistema Serverless está dominado por soluciones robustas de los principales proveedores de servicios en la nube, cada una con características distintivas:",
+      "technologies": [
+        {
+          "name": "AWS Lambda",
+          "provider": "Amazon Web Services",
+          "description": "Solución prominente que facilita la ejecución de código sin necesidad de configurar o administrar servidores. Ofrece escalamiento dinámico, alta disponibilidad y un modelo de facturación por microsegundos de uso.",
+          "features": [
+            "Soporte para múltiples lenguajes (Node.js, Python, Java, Go, etc.)",
+            "Integración nativa con servicios AWS",
+            "Tiempo máximo de ejecución de 15 minutos",
+            "Monitorización detallada con CloudWatch"
+          ],
+          "icon": "aws"
+        },
+        {
+          "name": "Azure Functions",
+          "provider": "Microsoft Azure",
+          "description": "Servicio serverless de Microsoft diseñado para facilitar el desarrollo e implementación de aplicaciones altamente escalables. Destaca por su excepcional integración con el ecosistema más amplio de soluciones Azure.",
+          "features": [
+            "Soporte para C#, JavaScript, Python, Java, PowerShell",
+            "Integración perfecta con servicios Microsoft",
+            "Bindings para conectar múltiples servicios",
+            "Planes de consumo y premium"
+          ],
+          "icon": "azure"
+        },
+        {
+          "name": "Google Cloud Functions",
+          "provider": "Google Cloud",
+          "description": "Plataforma que ofrece un entorno de ejecución para funciones independientes que responden a eventos o solicitudes HTTP. Sobresale por su despliegue intuitivo y compatibilidad con diversos lenguajes de programación.",
+          "features": [
+            "Soporte para JavaScript, Python, Go, Java, etc.",
+            "Excelente integración con servicios Google Cloud",
+            "Escalabilidad automática basada en carga",
+            "Monitoreo integrado con Google Cloud Monitoring"
+          ],
+          "icon": "google"
+        }
+      ],
+      "animation": "fadeInUp"
+    },
+    {
+      "id": "models-comparison",
+      "title": "Comparativa con Modelos Tradicionales",
+      "content": "El enfoque Serverless representa un cambio fundamental respecto a los modelos tradicionales de computación en la nube:",
+      "comparison": [
+        {
+          "model": "IaaS (Infraestructura como Servicio)",
+          "description": "El usuario gestiona servidores virtuales, redes y almacenamiento.",
+          "responsibility": "Alta - El usuario administra todo excepto el hardware físico",
+          "scalability": "Manual o semi-automática",
+          "cost": "Pago por recursos asignados, incluso inactivos"
+        },
+        {
+          "model": "PaaS (Plataforma como Servicio)",
+          "description": "El usuario se centra en el desarrollo y despliegue de aplicaciones mientras el proveedor gestiona la plataforma.",
+          "responsibility": "Media - El usuario gestiona aplicaciones y datos",
+          "scalability": "Semi-automática con configuración",
+          "cost": "Normalmente por horas de uso de la plataforma"
+        },
+        {
+          "model": "Serverless (FaaS)",
+          "description": "El usuario solo escribe código que se ejecuta en respuesta a eventos; el proveedor gestiona toda la infraestructura.",
+          "responsibility": "Baja - Solo código y configuración lógica",
+          "scalability": "Totalmente automática e instantánea",
+          "cost": "Precisamente por ejecución real (milisegundos)"
+        }
+      ],
+      "imageUrl": "/images/serverless-comparison.jpg",
+      "animation": "fadeInLeft"
+    },
+    {
+      "id": "monitoring-tools",
+      "title": "Herramientas de Monitorización y Diagnóstico",
+      "content": "Las soluciones de observabilidad son fundamentales para supervisar aplicaciones serverless y garantizar su correcto funcionamiento:",
+      "tools": [
+        {
+          "name": "AWS CloudWatch",
+          "description": "Servicio de monitorización integral de AWS que proporciona métricas, registros y alarmas para aplicaciones serverless. Permite la visualización de rendimiento y configuración de alertas automatizadas.",
+          "features": [
+            "Registro de invocaciones y errores",
+            "Métricas de rendimiento en tiempo real",
+            "Configuración de alarmas personalizadas",
+            "Visualización de datos y dashboards"
+          ],
+          "icon": "cloudwatch"
+        },
+        {
+          "name": "Azure Monitor",
+          "description": "Plataforma completa de Microsoft para recopilar, analizar y actuar sobre datos de telemetría de entornos serverless en Azure. Facilita la detección proactiva de problemas.",
+          "features": [
+            "Application Insights para funciones",
+            "Monitorización de rendimiento y disponibilidad",
+            "Alertas inteligentes y automatizadas",
+            "Integración con Logic Apps para respuestas automáticas"
+          ],
+          "icon": "azure-monitor"
+        },
+        {
+          "name": "Datadog",
+          "description": "Solución de monitorización como servicio que ofrece una visibilidad completa para aplicaciones serverless en múltiples proveedores de nube. Ideal para entornos híbridos o multi-cloud.",
+          "features": [
+            "Observabilidad unificada entre proveedores",
+            "Trazabilidad de extremo a extremo",
+            "Análisis de rendimiento detallado",
+            "Detección de anomalías mediante IA"
+          ],
+          "icon": "datadog"
+        }
+      ],
+      "animation": "zoomIn"
     },
     {
       "id": "benefits",
@@ -106,9 +221,46 @@
           "title": "Procesamiento de tickets",
           "description": "Clasificación y enrutamiento automático de tickets de soporte mediante análisis de texto.",
           "icon": "tickets"
+        },
+        {
+          "title": "Integración entre sistemas",
+          "description": "Conectores serverless que mantienen sincronizadas múltiples plataformas de gestión técnica y tickets.",
+          "icon": "integration"
+        },
+        {
+          "title": "Análisis predictivo de fallos",
+          "description": "Procesamiento de logs en tiempo real para identificar patrones anómalos antes de que causen problemas.",
+          "icon": "analytics"
+        },
+        {
+          "title": "Backups y mantenimiento automático",
+          "description": "Tareas programadas que se ejecutan sin servidores activos permanentemente, optimizando recursos.",
+          "icon": "backup"
+        },
+        {
+          "title": "Escalado dinámico de recursos",
+          "description": "Aumento o disminución automática de recursos asignados al soporte según la demanda actual.",
+          "icon": "scale"
         }
       ],
-      "imageUrl": "/images/serverless-diagram.svg",
+      "useCases": [
+        {
+          "title": "Automatización de diagnóstico en tiempo real",
+          "description": "Funciones serverless que procesan datos de telemetría de equipos cliente y detectan anomalías antes de que causen fallos graves.",
+          "impact": "Reducción de 70% en tiempo de diagnóstico de problemas complejos"
+        },
+        {
+          "title": "Plataforma de gestión de incidentes escalable",
+          "description": "Sistema de soporte técnico que escala automáticamente durante picos de demanda sin intervención manual.",
+          "impact": "Capacidad para manejar 10x más incidentes sin degradación de servicio"
+        },
+        {
+          "title": "Análisis de sentimiento en tickets",
+          "description": "Procesamiento de lenguaje natural en tickets de soporte para priorizar casos urgentes o con clientes insatisfechos.",
+          "impact": "Mejora de 35% en métricas de satisfacción de cliente"
+        }
+      ],
+      "imageUrl": "/images/serverless-support.jpg",
       "animation": "fadeInUp"
     },
     {

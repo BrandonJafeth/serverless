@@ -23,13 +23,13 @@ const IndustryImpactSection = ({ data }) => {
           {data.statistics && data.statistics.map((stat, index) => (
             <div key={index} className="p-6 bg-white/10 backdrop-blur-sm rounded-lg">
               <div className="text-4xl font-bold text-blue-300 mb-2">{stat.value}</div>
-              <div className="text-blue-100">{stat.label}</div>
+              <div className="text-white">{stat.label}</div>
             </div>
           ))}
         </div>
         
         <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-4">Casos de Estudio Destacados</h3>
+          <h3 className="text-xl font-semibold mb-4 text-white">Casos de Estudio Destacados</h3>
           <ul className="space-y-3 text-left">
             {data.caseStudies && data.caseStudies.map((caseStudy, index) => (
               <li key={index} className="flex items-start">
@@ -38,7 +38,7 @@ const IndustryImpactSection = ({ data }) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                <span className="text-lg font-medium">{caseStudy}</span>
+                <span className="text-lg font-medium text-white">{caseStudy}</span>
               </li>
             ))}
           </ul>

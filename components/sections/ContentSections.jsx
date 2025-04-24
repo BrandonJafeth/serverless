@@ -9,11 +9,17 @@ import FutureSection from './FutureSection';
 import ConclusionSection from './ConclusionSection';
 import CTASection from './CTASection';
 import ContactSection from './ContactSection';
+import KeyTechnologiesSection from './KeyTechnologiesSection';
+import ModelsComparisonSection from './ModelsComparisonSection';
+import MonitoringToolsSection from './MonitoringToolsSection';
 
 // Exportar todos los componentes para facilitar la importación
 export {
   IntroSection,
   HowItWorksSection,
+  KeyTechnologiesSection,
+  ModelsComparisonSection,
+  MonitoringToolsSection,
   BenefitsSection,
   IndustryImpactSection,
   TechSupportSection,
