@@ -14,9 +14,7 @@ import {
   TechSupportSection,
   ChallengesSection,
   FutureSection,
-  ConclusionSection,
-  CTASection,
-  ContactSection
+  ConclusionSection
 } from '../components/sections/ContentSections';
 
 // Definición de interfaces para TypeScript
@@ -190,8 +188,6 @@ const MainContent = () => {
         }
       })}
       
-      <CTASection data={typedData.cta} />
-      <ContactSection data={typedData.contact} />
     </main>
   );
 };

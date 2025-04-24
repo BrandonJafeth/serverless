@@ -8,7 +8,7 @@ const HowItWorksSection = ({ data }) => {
   return (
     <BaseContentSection data={data} bgColor="bg-gray-900" reverse={true}>
       <ContentImage 
-        src="/images/serverless-flow.svg" 
+        src="/images/Serverless.jpg" 
         alt="Serverless Workflow" 
       />
       <div className="w-full md:w-1/2">

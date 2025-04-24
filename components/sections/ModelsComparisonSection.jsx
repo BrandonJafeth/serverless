@@ -45,42 +45,6 @@ const ModelsComparisonSection = ({ data }) => {
             </table>
           </div>
         </div>
-        
-        {/* Visualización gráfica */}
-        <div className="mt-12">
-          <h3 className="text-xl font-bold mb-6 text-center text-gray-200">Comparación visual de responsabilidades</h3>
-          
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {data.comparison.map((model, index) => (
-              <div key={index} className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700">
-                <div className="text-center mb-4">
-                  <h4 className="text-lg font-bold text-blue-300">{model.model}</h4>
-                </div>
-                
-                <div className="relative h-64">
-                  <div className="absolute bottom-0 left-0 right-0 bg-gray-700 rounded-lg w-full">
-                    <div 
-                      className={`
-                        ${index === 0 ? 'bg-blue-500' : index === 1 ? 'bg-blue-400' : 'bg-blue-300'} 
-                        rounded-lg text-white text-center py-2
-                      `}
-                      style={{ 
-                        height: index === 0 ? '85%' : index === 1 ? '60%' : '30%'
-                      }}
-                    >
-                      <span className="absolute bottom-2 left-0 right-0 text-center font-medium">
-                        {index === 0 ? 'Alta' : index === 1 ? 'Media' : 'Baja'}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="absolute top-0 left-0 right-0 text-center -mt-8">
-                    <span className="font-semibold text-gray-300">Responsabilidad</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </BaseContentSection>
   );

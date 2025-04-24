@@ -20,7 +20,7 @@ export default function RootLayout({
         <header className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="#" className="text-xl font-bold text-blue-400">
-              Serverless<span className="text-blue-300">Research</span>
+              UNA |<span className="text-blue-300"> Serverless</span>
             </a>
             <nav className="hidden md:flex space-x-8">
               <a href="#intro" className="text-gray-300 hover:text-blue-300 transition-colors">¿Qué es?</a>
