@@ -14,24 +14,26 @@ const BenefitsSection = ({ data }) => {
   
   return (
     <BaseContentSection data={data} bgColor="bg-white">
-      <div className="w-full text-center mb-12">
-        <SectionTitle 
-          title={data.title} 
-          subtitle={data.content} 
-          centered={true}
-          titleColor="text-blue-700"
-        />
-      </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {data.benefits.map((benefit, index) => (
-          <AnimatedCard
-            key={index}
-            icon={getIcon(benefit.icon)}
-            title={benefit.title}
-            description={benefit.description}
-            delay={index * 100}
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <SectionTitle 
+            title={data.title} 
+            subtitle={data.content} 
+            centered={true}
+            titleColor="text-blue-600"
           />
-        ))}
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {data.benefits.map((benefit, index) => (
+            <AnimatedCard
+              key={index}
+              icon={getIcon(benefit.icon)}
+              title={benefit.title}
+              description={benefit.description}
+              delay={index * 100}
+            />
+          ))}
+        </div>
       </div>
     </BaseContentSection>
   );
