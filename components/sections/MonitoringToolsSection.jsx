@@ -29,6 +29,18 @@ const MonitoringToolsSection = ({ data }) => {
         );
     }
   };
+
+  // Función para obtener la URL según el tipo de herramienta
+  const getToolUrl = (toolIcon) => {
+    switch (toolIcon) {
+      case 'cloudwatch':
+        return 'https://aws.amazon.com/es/cloudwatch/';
+      case 'azure-monitor':
+        return 'https://azure.microsoft.com/es-es/products/monitor';
+      default:
+        return 'https://www.datadoghq.com/'; // URL por defecto para Datadog
+    }
+  };
   
   return (
     <BaseContentSection data={data} bgColor="bg-gradient-to-br from-gray-900 to-gray-800">
@@ -81,16 +93,19 @@ const MonitoringToolsSection = ({ data }) => {
                 </div>
                 
                 <div className="mt-6">
-                  <button 
+                  <a 
+                    href={getToolUrl(tool.icon)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`
                       ${tool.icon === 'cloudwatch' ? 'bg-yellow-600 hover:bg-yellow-700' : 
                         tool.icon === 'azure-monitor' ? 'bg-blue-700 hover:bg-blue-800' : 
                         'bg-purple-700 hover:bg-purple-800'} 
-                      text-white py-2 px-4 rounded-lg transition-colors duration-200
+                      text-white py-2 px-4 rounded-lg transition-colors duration-200 inline-block
                     `}
                   >
                     Explorar herramienta
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
