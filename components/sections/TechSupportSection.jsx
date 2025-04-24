@@ -59,7 +59,7 @@ const TechSupportSection = ({ data }) => {
                 key={index} 
                 className={`w-64 bg-gray-900 rounded-lg shadow-md border-t-4 ${style.border} p-5 text-center flex flex-col items-center`}
               >
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${style.icon}`}>
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 ${style.icon}`}>
                   {getIcon(app.icon)}
                 </div>
                 <h3 className="text-xl font-bold text-blue-300 mb-2">{app.title}</h3>

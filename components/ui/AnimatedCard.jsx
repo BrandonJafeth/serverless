@@ -10,6 +10,7 @@ const AnimatedCard = ({
 }) => {
   const cardRef = useRef(null);
   
+  // Usar el hook para animar con scroll
   useAnimateOnScroll(cardRef, {
     opacity: [0, 1],
     translateY: [20, 0],
@@ -21,6 +22,7 @@ const AnimatedCard = ({
     <div 
       ref={cardRef}
       className={`bg-gray-900 p-6 border border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0 flex flex-col items-center text-center h-full ${className}`}
+      style={{ willChange: 'opacity, transform' }}
     >
       {icon && (
         <div className="text-blue-400 mb-4 flex justify-center">

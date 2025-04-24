@@ -21,19 +21,19 @@ const AnimatedSection = ({
   switch (animation) {
     case 'fadeInUp':
       animationProps.opacity = [0, 1];
-      animationProps.translateY = [50, 0];
+      animationProps.translateY = [30, 0];
       break;
     case 'fadeInLeft':
       animationProps.opacity = [0, 1];
-      animationProps.translateX = [-100, 0];
+      animationProps.translateX = [-50, 0];
       break;
     case 'fadeInRight':
       animationProps.opacity = [0, 1];
-      animationProps.translateX = [100, 0];
+      animationProps.translateX = [50, 0];
       break;
     case 'zoomIn':
       animationProps.opacity = [0, 1];
-      animationProps.scale = [0.9, 1];
+      animationProps.scale = [0.95, 1];
       break;
     default:
       animationProps.opacity = [0, 1];
@@ -50,7 +50,8 @@ const AnimatedSection = ({
     >
       <div
         ref={contentRef}
-        className={`container mx-auto px-4 md:px-8 z-10 flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12`}
+        className={`container mx-auto px-4 md:px-8 z-10 flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12 opacity-0`}
+        style={{ willChange: 'opacity, transform' }}
       >
         {children}
       </div>

@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { animate, createScope } from 'animejs';
 
-// Hook para animar elementos al hacer scroll (versión corregida)
+// Hook para animar elementos al hacer scroll (versión mejorada)
 export const useAnimateOnScroll = (ref, animationOptions) => {
   const animated = useRef(false);
+  const isVisible = useRef(false);
   
   useEffect(() => {
     if (!ref.current) return;
@@ -49,16 +50,25 @@ export const useAnimateOnScroll = (ref, animationOptions) => {
     // Configurar Intersection Observer para detectar cuando el elemento está en la vista
     const setupObserver = () => {
       observer = new IntersectionObserver((entries) => {
-        // La animación se activa cuando el elemento entra en la vista y se resetea cuando sale completamente
-        if (entries[0].isIntersecting) {
-          animateElement();
-        } else if (!entries[0].isIntersecting && entries[0].intersectionRatio === 0) {
-          // Restablecer el estado animado cuando el elemento sale completamente de la vista
-          animated.current = false;
+        const entry = entries[0];
+        
+        // Si el elemento está entrando en el viewport
+        if (entry.isIntersecting) {
+          if (!isVisible.current) {
+            isVisible.current = true;
+            animateElement();
+          }
+        } else {
+          // Si el elemento sale completamente del viewport, resetear para permitir
+          // que se vuelva a animar cuando entre de nuevo
+          if (entry.intersectionRatio === 0) {
+            isVisible.current = false;
+            animated.current = false;
+          }
         }
       }, { 
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5], // Usar múltiples umbrales para mejor detección
-        rootMargin: '0px 0px -10% 0px' // Activar un poco antes de que el elemento sea completamente visible
+        threshold: 0.1, // Un umbral bajo para activar temprano
+        rootMargin: '0px 0px -10% 0px' // Activar un poco antes
       });
       
       observer.observe(element);
