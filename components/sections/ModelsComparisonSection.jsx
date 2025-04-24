@@ -1,4 +1,3 @@
-// filepath: c:\Users\JDGua\OneDrive\Escritorio\Soporte Avanzado\serverless\components\sections\ModelsComparisonSection.jsx
 import React from 'react';
 import BaseContentSection from './BaseSection';
 import { SectionTitle } from '../ui/SectionComponents';

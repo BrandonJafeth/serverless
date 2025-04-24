@@ -57,7 +57,10 @@ const ContactSection = ({ data }) => {
         </div>
         
         <div className="mt-8 text-gray-300">
-          <p>O contáctanos directamente: <a href={`mailto:${data.email}`} className="text-blue-400 hover:underline">{data.email}</a></p>
+          <p className="text-lg">Para más información, contáctanos directamente:</p>
+          <a href={`mailto:${data.email}`} className="text-blue-400 hover:underline text-xl font-medium mt-4 inline-block">
+            {data.email}
+          </a>
         </div>
       </div>
     </section>
