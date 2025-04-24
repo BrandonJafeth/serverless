@@ -7,20 +7,21 @@ const KeyTechnologiesSection = ({ data }) => {
   if (!data || !data.technologies) return null;
   
   return (
-    <BaseContentSection data={data} bgColor="bg-gray-50">
+    <BaseContentSection data={data} bgColor="bg-gray-800">
       <div className="w-full">
         <SectionTitle 
           title={data.title} 
           subtitle={data.content} 
           centered={true}
-          textColor="text-gray-900" 
+          textColor="text-gray-300"
+          titleColor="text-blue-400" 
         />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {data.technologies.map((tech, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+              className="bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 border border-gray-700"
             >
               <div className={`h-2 ${
                 tech.icon === 'aws' ? 'bg-yellow-500' : 
@@ -31,9 +32,9 @@ const KeyTechnologiesSection = ({ data }) => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                    tech.icon === 'aws' ? 'bg-yellow-100 text-yellow-600' : 
-                    tech.icon === 'azure' ? 'bg-blue-100 text-blue-600' : 
-                    'bg-green-100 text-green-600'
+                    tech.icon === 'aws' ? 'bg-yellow-900 text-yellow-400' : 
+                    tech.icon === 'azure' ? 'bg-blue-900 text-blue-400' : 
+                    'bg-green-900 text-green-400'
                   }`}>
                     {tech.icon === 'aws' ? (
                       <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -59,22 +60,22 @@ const KeyTechnologiesSection = ({ data }) => {
                     )}
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-bold text-gray-900">{tech.name}</h3>
-                    <p className="text-gray-900 text-sm">{tech.provider}</p>
+                    <h3 className="text-xl font-bold text-blue-300">{tech.name}</h3>
+                    <p className="text-gray-300 text-sm">{tech.provider}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-900 mb-6">{tech.description}</p>
+                <p className="text-gray-300 mb-6">{tech.description}</p>
                 
-                <div className="border-t pt-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Características clave:</h4>
+                <div className="border-t border-gray-700 pt-4">
+                  <h4 className="font-semibold text-gray-200 mb-2">Características clave:</h4>
                   <ul className="space-y-2">
                     {tech.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-gray-900">{feature}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

@@ -6,9 +6,14 @@ export const IntroSection = ({ data }) => {
   if (!data) return null;
   
   return (
-    <BaseContentSection data={data}>
+    <BaseContentSection data={data} bgColor="bg-gray-800">
       <div className="w-full md:w-1/2">
-        <SectionTitle title={data.title} subtitle={data.content} />
+        <SectionTitle 
+          title={data.title} 
+          subtitle={data.content}
+          titleColor="text-blue-400"
+          textColor="text-gray-300" 
+        />
       </div>
       <ContentImage 
         src="/images/serverless-diagram.svg" 

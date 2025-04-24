@@ -4,7 +4,7 @@ import AnimatedSection from '../ui/ParallaxSection';
 const BaseContentSection = ({ 
   data, 
   children, 
-  bgColor = "bg-gray-50", 
+  bgColor = "bg-gray-800", 
   reverse = false,
   contrast = false
 }) => {
